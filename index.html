@@ -8,45 +8,48 @@
     body {
       font-family: Arial, sans-serif;
       max-width: 700px;
-      margin: 40px auto;
+      margin: 40px auto 60px;
       padding: 0 20px;
-      color: #222;
-      background-color: #f9f9f9;
+      color: #ddd;
+      background-color: #121212;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     header {
       margin-bottom: 40px;
       text-align: center;
     }
     h1.logo {
-      font-size: 48px;
+      font-size: 64px;
       font-weight: bold;
-      color: #222;
+      color: #fff;
       margin: 0;
+      text-shadow: 0 0 8px #ffffffaa;
     }
     p.slogan {
       font-size: 18px;
       font-style: italic;
-      color: #666;
+      color: #bbb;
       margin-top: 6px;
       margin-bottom: 0;
     }
     h1.page-title {
       font-size: 28px;
       margin-bottom: 30px;
-      color: #333;
+      color: #fff;
       text-align: center;
     }
     section {
       margin-bottom: 30px;
-      background: white;
+      background: #1e1e1e;
       padding: 25px 30px;
-      border-radius: 6px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000000aa;
     }
     h2 {
       font-size: 22px;
       margin-bottom: 15px;
-      color: #444;
+      color: #fff;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -56,15 +59,26 @@
       min-width: 26px;
       text-align: center;
       user-select: none;
+      color: #fff;
     }
     p {
       font-size: 16px;
       line-height: 1.5;
       margin-bottom: 15px;
+      color: #ccc;
     }
     .contact {
       font-weight: bold;
       font-size: 18px;
+      color: #fff;
+    }
+    .visitor-counter {
+      margin-top: 40px;
+      text-align: center;
+      font-style: italic;
+      color: #888;
+      font-size: 14px;
+      user-select: none;
     }
   </style>
 </head>
@@ -97,6 +111,26 @@
     <p class="contact">Phone (Text & Call): 832-381-2840</p>
     <p class="contact">Email: Johnny.Thai.Hair@Gmail.com</p>
   </section>
+
+  <div class="visitor-counter">
+    Visits from this browser: <span id="visitCount">0</span>
+  </div>
+
+  <script>
+    // Visitor count per browser using localStorage
+    const visitKey = 'jtHairVisitCount';
+    let count = localStorage.getItem(visitKey);
+
+    if (count === null) {
+      count = 1;
+    } else {
+      count = parseInt(count, 10) + 1;
+    }
+
+    localStorage.setItem(visitKey, count);
+
+    document.getElementById('visitCount').textContent = count;
+  </script>
 
 </body>
 </html>
