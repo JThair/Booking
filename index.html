@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JT Hair - Booking Instructions</title>
+  <meta name="description" content="JT Hair booking instructions for new and existing customers. Learn how to book your haircut or color appointment and contact details.">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -93,6 +94,13 @@
       font-size: 18px;
       color: #fff;
     }
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
     .visitor-counter {
       margin-top: 40px;
       text-align: center;
@@ -101,6 +109,9 @@
       font-size: 14px;
       user-select: none;
     }
+    @media (max-width: 480px) {
+      h1.logo { font-size: 42px; }
+    }
   </style>
 </head>
 <body>
@@ -108,7 +119,7 @@
   <header>
     <h1 class="logo">JT Hair</h1>
     <p class="slogan">Beauty Is In The Trust</p>
-    <a href="https://jthair.github.io/Main-Page/" class="back-button" aria-label="Back to Main Page">Back to Main Page</a>
+    <a href="https://jthair.github.io/Main-Page/" class="back-button" aria-label="Back to Main Page" rel="noopener noreferrer">Back to Main Page</a>
   </header>
 
   <h1 class="page-title">How to Book Your Appointment</h1>
@@ -130,8 +141,8 @@
 
   <section>
     <h2><span class="icon">📞</span>Contact Info</h2>
-    <p class="contact">Phone (Text & Call): 832-381-2840</p>
-    <p class="contact">Email: Johnny.Thai.Hair@Gmail.com</p>
+    <p class="contact">Phone (Text & Call): <a href="tel:8328606584">832-860-6584</a></p>
+    <p class="contact">Email: <a href="mailto:Johnny.Thai.Hair@Gmail.com">Johnny.Thai.Hair@Gmail.com</a></p>
   </section>
 
   <div class="visitor-counter">
